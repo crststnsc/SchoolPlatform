@@ -1,0 +1,38 @@
+﻿<Window x:Class="SchoolPlatform.Views.AdminView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolPlatform.Views"
+        xmlns:vm="clr-namespace:SchoolPlatform.ViewModels"
+        mc:Ignorable="d"
+        Title="AdminView" Height="450" Width="800"
+        FontFamily="Comic Sans Ms">
+    <Window.DataContext>
+        <vm:AdminVM/>
+    </Window.DataContext>
+    <Grid Width="500" Height="200">
+        <Grid.RowDefinitions>
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+        <ColumnDefinition />
+        <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+
+    <Button Grid.Row="0" Grid.Column="0" Content="USERS" Command="{Binding UserCommand}"/>
+    <Button Grid.Row="0" Grid.Column="1" Content="TEACHERS" Command="{Binding TeacherCommand}"/>
+    <Button Grid.Row="0" Grid.Column="2" Content="STUDENTS" Command="{Binding StudentCommand}"/>
+
+    <Button Grid.Row="1" Grid.Column="0" Content="GRADES" Command="{Binding GradeCommand}"/>
+    <Button Grid.Row="1" Grid.Column="1" Content="SUBJECTS" Command="{Binding SubjectCommand}"/>
+    <Button Grid.Row="1" Grid.Column="2" Content="CLASSES" Command="{Binding ClassCommnad}"/>
+
+    <Button Grid.Row="2" Grid.Column="0" Content="SPECIALIZATIONS" Command="{Binding SpecializationCommand}"/>
+    <Button Grid.Row="2" Grid.Column="1" Content="SUBJECTCLASS" Command="{Binding SubjectClassCommand}"/>
+    <Button Grid.Row="2" Grid.Column="2" Content="ATTENDANCE" Command="{Binding AttendanceCommand}"/>
+    </Grid>
+</Window>
